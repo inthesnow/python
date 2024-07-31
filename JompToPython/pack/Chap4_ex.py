@@ -46,3 +46,58 @@ print(str(x))
 print(str(y))
 
 #5 공 넣기
+import sys
+
+N, M = map(int, input().split())
+lst=[0]*N
+for i in range(M):
+    a, b, c = map(int, sys.stdin.readline().split())
+    for j in range(a-1,b):
+        lst[j] = c
+print(*lst)
+
+#5 공 바꾸기
+import sys
+
+N, M = map(int, input().split())
+lst=list(range(1,N+1))
+for i in range(M):
+    a, b= map(int, sys.stdin.readline().split())
+    tmp = lst[a-1]
+    lst[a-1]= lst[b-1]
+    lst[b-1]= tmp
+print(*lst)
+
+#6 과제 안 내신 분...?
+import sys
+
+t=list(range(1,31))
+s=list(range(1,29))
+a=0
+for i in range(1, 29):
+    s[i-1] = int(sys.stdin.readline())
+    
+for i in range(30):
+    for j in range(28):
+        if t[i]==s[j]:
+            a=s[j]
+            break
+    if t[i]==a: continue
+    else: print(str(t[i]))
+
+#7 나머지
+import sys
+
+n=[0]*10
+cnt=10
+for i in range(10):
+    n[i] = int(sys.stdin.readline())
+    n[i] = n[i]%42
+for i in range(10):
+    for j in range(i+1,10):
+        if n[i]==n[j]:
+            cnt-=1
+            break
+print(cnt)
+
+#8 바구니 뒤집기

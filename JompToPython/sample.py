@@ -1,10 +1,8 @@
 import sys
 
-N, M = map(int, input().split())
-a, b, c = 0
-for i in range(M):
-    lst=list(map(int, sys.stdin.readline().split()))
-    a = lst[0]
-    b = lst[1]
-    c = lst[2]
-    
+n, m = map(int, sys.stdin.readline().split())
+b = list(range(1,n+1))
+for i in range(m):
+    x, y = map(int, sys.stdin.readline().split())
+    for x in y:
+        print(i)
