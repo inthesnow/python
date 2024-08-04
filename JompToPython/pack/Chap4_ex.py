@@ -56,7 +56,7 @@ for i in range(M):
         lst[j] = c
 print(*lst)
 
-#5 공 바꾸기
+#6 공 바꾸기
 import sys
 
 N, M = map(int, input().split())
@@ -68,7 +68,7 @@ for i in range(M):
     lst[b-1]= tmp
 print(*lst)
 
-#6 과제 안 내신 분...?
+#7 과제 안 내신 분...?
 import sys
 
 t=list(range(1,31))
@@ -85,7 +85,7 @@ for i in range(30):
     if t[i]==a: continue
     else: print(str(t[i]))
 
-#7 나머지
+#8 나머지
 import sys
 
 n=[0]*10
@@ -100,4 +100,25 @@ for i in range(10):
             break
 print(cnt)
 
-#8 바구니 뒤집기
+#9 바구니 뒤집기
+import sys
+
+n, m = map(int, sys.stdin.readline().split())
+b = list(range(1,n+1))
+for i in range(m):
+    x, y = map(int, sys.stdin.readline().split())
+    b[x-1:y]=reversed(b[x-1:y])
+print(*b)
+
+#10 평균
+import sys
+
+n = int(sys.stdin.readline())
+x = list(map(int, sys.stdin.readline().split()))
+tmp=0
+sum=0
+for i in range(n):
+    if tmp <=x[i]: tmp=x[i]
+for i in range(n):
+    sum+=x[i]/tmp*100
+print(sum/n)
