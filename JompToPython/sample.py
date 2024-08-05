@@ -1,12 +1,16 @@
 import sys
 
-n = int(sys.stdin.readline())
-x = list(map(int, sys.stdin.readline().split()))
-tmp=0
-sum=0
-for i in range(n):
-    if tmp <=x[i]: tmp=x[i]
-for i in range(n):
-    sum+=x[i]/tmp*100
-print(sum/n)
+print(list(range(8)))
+d=[[0]*3]*8
+cnt=0
+print(d)
+for i in range(8):
+    d[i][0]=cnt+1
+    d[i][1]=cnt+2
+    d[i][2]=cnt+3
+    if i==5 or i==7: d[i].append()
+    print("i = "+str(i)+", d["+str(i)+"] = "+str(d[i]))
     
+    cnt+=3
+    
+#print(d)
